@@ -204,3 +204,8 @@ Lorsque vous fermez Visual Studio Code, les conteneurs Docker seront
 automatiquement arrêtés. Dès que vous rouvrez Visual Studio Code et que vous
 exécutez à nouveau la commande `docker compose up`, les services Docker seront
 redémarrés.
+
+## Maquette
+
+La maquette de l'interface est disponible sur Figma :
+[SetPoint – Maquette](https://www.figma.com/design/xVwPpkO4oR4NItDFG7xiWh/Untitled?node-id=0-1&t=FFMQ5dP3bqYbLHpp-1)

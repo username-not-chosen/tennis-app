@@ -1,0 +1,71 @@
+erDiagram
+    roles {
+        int id_role PK
+        varchar(50) libelle UK "NOT NULL"
+    }
+
+    surfaces {
+        int id_surface PK
+        varchar(50) libelle UK "NOT NULL"
+    }
+
+    meteos {
+        int id_meteo PK
+        varchar(50) libelle UK "NOT NULL"
+    }
+
+    types_match {
+        int id_type PK
+        varchar(50) libelle UK "NOT NULL"
+    }
+
+    utilisateurs {
+        int id_utilisateur PK
+        varchar(100) prenom "NOT NULL"
+        varchar(100) nom "NOT NULL"
+        varchar(255) email UK "NOT NULL"
+        varchar(255) mot_de_passe_hash "NOT NULL"
+        date date_naissance "NULL"
+        varchar(20) sexe "NULL"
+        varchar(2) langue "NOT NULL, défaut fr"
+        datetime date_inscription "NOT NULL, défaut maintenant"
+        int id_role FK "NOT NULL, défaut 1"
+    }
+
+    matchs {
+        int id_match PK
+        varchar(150) titre "NOT NULL"
+        text description "NULL"
+        datetime date_match "NOT NULL"
+        int duree "NULL, en minutes"
+        varchar(150) lieu "NULL"
+        int camp_vainqueur "NOT NULL, 1 ou 2"
+        int id_createur FK "NOT NULL"
+        int id_surface FK "NOT NULL"
+        int id_meteo FK "NULL"
+        int id_type FK "NOT NULL"
+    }
+
+    sets {
+        int id_match PK, FK
+        int numero_set PK
+        int jeux_camp1 "NOT NULL"
+        int jeux_camp2 "NOT NULL"
+    }
+
+    participations {
+        int id_match PK, FK
+        int id_utilisateur PK, FK
+        int camp "NOT NULL, 1 ou 2"
+        int note "NULL, de 1 à 5"
+        text commentaire "NULL"
+    }
+
+    roles ||--o{ utilisateurs : "id_role"
+    utilisateurs ||--o{ matchs : "id_createur"
+    surfaces ||--o{ matchs : "id_surface"
+    meteos |o--o{ matchs : "id_meteo"
+    types_match ||--o{ matchs : "id_type"
+    matchs ||--|{ sets : "id_match"
+    matchs ||--|{ participations : "id_match"
+    utilisateurs ||--o{ participations : "id_utilisateur"

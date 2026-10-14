@@ -1,0 +1,24 @@
+flowchart LR
+    ROLE["<b>ROLE</b><br>---<br>#id_role<br>libelle"]
+    UTILISATEUR["<b>UTILISATEUR</b><br>---<br>#id_utilisateur<br>prenom<br>nom<br>email<br>mot_de_passe_hash<br>date_naissance<br>sexe<br>langue<br>date_inscription"]
+    MATCH["<b>MATCH</b><br>---<br>#id_match<br>titre<br>description<br>date_match<br>duree<br>lieu<br>camp_vainqueur"]
+    SET_["<b>SET</b><br>---<br>#numero_set<br>jeux_camp1<br>jeux_camp2"]
+    SURFACE["<b>SURFACE</b><br>---<br>#id_surface<br>libelle"]
+    METEO["<b>METEO</b><br>---<br>#id_meteo<br>libelle"]
+    TYPE_MATCH["<b>TYPE_MATCH</b><br>---<br>#id_type<br>libelle"]
+
+    POSSEDER(["POSSEDER"])
+    CREER(["CREER"])
+    PARTICIPER(["<b>PARTICIPER</b><br>---<br>camp<br>note<br>commentaire"])
+    COMPOSER(["COMPOSER"])
+    SE_JOUER_SUR(["SE_JOUER_SUR"])
+    AVOIR_METEO(["AVOIR_METEO"])
+    ETRE_DE(["ETRE_DE"])
+
+    UTILISATEUR ---|"1,1"| POSSEDER ---|"0,n"| ROLE
+    UTILISATEUR ---|"0,n"| CREER ---|"1,1"| MATCH
+    UTILISATEUR ---|"0,n"| PARTICIPER ---|"2,n"| MATCH
+    MATCH ---|"1,n"| COMPOSER ---|"(1,1)"| SET_
+    MATCH ---|"1,1"| SE_JOUER_SUR ---|"0,n"| SURFACE
+    MATCH ---|"0,1"| AVOIR_METEO ---|"0,n"| METEO
+    MATCH ---|"1,1"| ETRE_DE ---|"0,n"| TYPE_MATCH

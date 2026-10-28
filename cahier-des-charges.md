@@ -41,8 +41,7 @@ ressenti et les commentaires restent en revanche strictement personnels.
 - Informations d'un match :
   - titre et description ;
   - date ;
-  - adversaire : soit un·e joueur·euse inscrit·e sur la plateforme, soit
-    simplement un nom saisi librement ;
+  - adversaire : un·e joueur·euse inscrit·e sur la plateforme ;
   - score (sets) et résultat (victoire / défaite) ;
   - durée du match ;
   - lieu de la rencontre ;

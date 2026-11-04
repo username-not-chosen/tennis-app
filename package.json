@@ -1,0 +1,21 @@
+{
+  "name": "tennis-app",
+  "version": "1.0.0",
+  "description": "Ce modèle de projet est conçu pour les étudiant.es du cours [_\"Programmation Serveur 2 (ProgServ2)\"_](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course) à la [HEIG-VD](https://heig-vd.ch).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username-not-chosen/tennis-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/username-not-chosen/tennis-app/issues"
+  },
+  "homepage": "https://github.com/username-not-chosen/tennis-app#readme"
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 751 472" preserveAspectRatio="xMidYMid slice">
+  <!-- Fond -->
+  <rect width="751" height="472" fill="#E3EEE6"/>
+  <!-- Surface du court -->
+  <rect x="52.5" y="87" width="646" height="298" rx="6" fill="#1E5E45"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round">
+    <!-- Lignes de double -->
+    <rect x="52.5" y="87" width="646" height="298" rx="6"/>
+    <!-- Lignes de simple -->
+    <line x1="52.5" y1="124" x2="698.5" y2="124"/>
+    <line x1="52.5" y1="348" x2="698.5" y2="348"/>
+    <!-- Lignes de service -->
+    <line x1="201.6" y1="124" x2="201.6" y2="348"/>
+    <line x1="549.4" y1="124" x2="549.4" y2="348"/>
+    <!-- Ligne médiane de service -->
+    <line x1="201.6" y1="236" x2="549.4" y2="236"/>
+  </g>
+  <!-- Filet -->
+  <line x1="375.5" y1="77" x2="375.5" y2="395" stroke="#16243A" stroke-width="4" stroke-linecap="round"/>
+</svg>

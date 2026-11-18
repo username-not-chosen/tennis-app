@@ -88,8 +88,6 @@ require __DIR__ . '/../templates/header.php';
 
 <?php if ($messageBienvenue) { ?>
     <script>
-        // json_encode transforme le texte en chaîne JavaScript sûre
-        // (les guillemets et les balises sont échappés : pas d'injection possible)
         alert(<?= json_encode($messageBienvenue, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP) ?>);
     </script>
 <?php } ?>

@@ -36,13 +36,6 @@ class Utilisateur {
         return $utilisateur;
     }
 
-    /**
-     * Vérifie les données de l'utilisateur.
-     * Si $motDePasse est fourni, il est vérifié aussi.
-     *
-     * @return string[] la liste des erreurs (vide si tout est valide)
-     */
-
     public function valider(?string $motDePasse = null): array {
         $erreurs = [];
 
@@ -74,11 +67,6 @@ class Utilisateur {
         return $erreurs;
     }
 
-    /**
-     * Vérifie un mot de passe en clair (utile aussi pour le changement de mot de passe).
-     *
-     * @return string[] la liste des erreurs
-     */
     public static function validerMotDePasse(string $motDePasse): array {
         if (mb_strlen($motDePasse) < self::MOT_DE_PASSE_LONGUEUR_MIN) {
             return ['Le mot de passe doit contenir au moins ' . self::MOT_DE_PASSE_LONGUEUR_MIN . ' caractères.'];
